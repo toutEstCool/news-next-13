@@ -1,0 +1,3 @@
+.navLink {
+  @apply hover:underline decoration-orange-400 text-center decoration-2 active:text-[#dcad76] active:underline underline-offset-8 rounded-full cursor-pointer  capitalize hover:scale-110 transition-transform duration-200 ease-out text-[14px] tracking-wider font-medium;
+}
