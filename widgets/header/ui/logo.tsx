@@ -1,4 +1,4 @@
-export const Logo = () => {
+export const Logo: React.FC = (): JSX.Element => {
   return (
     <svg
       data-testid="svg-symbol"

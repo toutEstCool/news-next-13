@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import { Banner } from "../widgets/banner/banner";
-import { Footer } from "../widgets/footer/foooter";
 import { Header } from "../widgets/header/header";
 import { InfoPanel } from "../widgets/info-panel/info-panel";
 
@@ -16,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gray-100 text-black dark:bg-zinc-900 transition-all duration-700 dark:text-white">
         <Banner />
         <div className="max-w-[1335px] w-[100%] mx-auto">
           <div>
@@ -25,7 +24,6 @@ export default function RootLayout({
           </div>
           <div>{children}</div>
         </div>
-        <Footer />
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 export const Banner: React.FC = (): JSX.Element => {
   return (
-    <div className="flex overflow-hidden justify-center items-center h-[250px] border-b-[1px] border-slate-800 bg-[#ee375e]">
+    <div className="flex overflow-hidden justify-center items-center w-[100vw] h-[250px] border-b-[1px] border-slate-800 bg-[#ee375e]">
       <a
         href="https://instagram.com/meduza"
         className="flex justify-center items-center h-[249px]"
