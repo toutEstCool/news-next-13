@@ -18,16 +18,13 @@ const fetchNews = async (
 
   const query = gql`
     query MyQuery(
-      $access_key: String!
-      $categories: String!
-      $keywords: String
+      $access_key: String! # $categories: String! # $keywords: String
     ) {
       myQuery(
         access_key: $access_key
-        categories: $categories
+        # categories: $categories
         countries: "gb"
-        sort: "published_desc"
-        keywords: $keywords
+        sort: "published_desc" # keywords: $keywords
       ) {
         data {
           author
@@ -71,12 +68,15 @@ const fetchNews = async (
       }),
     }
   );
+
   const newResponse = await res.json();
+
   const news = sortNewsByImage(newResponse.data.myQuery);
-  console.log(news);
 
   return news;
 };
+
+fetchNews();
 
 export default fetchNews;
 // "http://api.mediastack.com/v1/news?access_key=7c9cc31626fa3ce185058b4850efe45d&countries=us%2Cgb&limit=100&offset=0&sort=published_desc"
