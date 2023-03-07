@@ -17,7 +17,7 @@ export const SearchBox = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-6xl mx-auto flex justify-between items-center text-black"
+      className="max-w-6xl mx-5 flex justify-between items-center text-black"
     >
       <input
         placeholder="Search Keywords..."

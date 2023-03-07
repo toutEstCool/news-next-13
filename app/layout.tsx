@@ -6,6 +6,10 @@ import { InfoPanel } from "../widgets/info-panel/info-panel";
 export const metadata = {
   title: "True News in Your City",
   description: "Find out the latest news first",
+  authors: { name: "The Frontend", url: "https://github.com/toutEstCool" },
+  icons: {
+    icon: "https://i.pinimg.com/564x/b7/41/26/b74126558cdcd47c6c3344bc933bb40b.jpg",
+  },
 };
 
 export default function RootLayout({
