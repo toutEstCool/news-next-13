@@ -17,9 +17,7 @@ const fetchNews = async (
     "https://helsinki.stepzen.net/api/ignoble-waterbuffalo/__graphql";
 
   const query = gql`
-    query MyQuery(
-      $access_key: String! # $categories: String! # $keywords: String
-    ) {
+    query MyQuery($access_key: String!) {
       myQuery(
         access_key: $access_key
         # categories: $categories
@@ -53,7 +51,7 @@ const fetchNews = async (
     {
       method: "POST",
       cache: isDynamic ? "no-cache" : "default",
-      next: isDynamic ? { revalidate: 0 } : { revalidate: 20 },
+      next: isDynamic ? { revalidate: 0 } : { revalidate: 120 },
       headers: {
         "Content-Type": "application/json",
         Authorization: `Apikey ${process.env.STEPZEN_API_KEY}`,

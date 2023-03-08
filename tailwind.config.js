@@ -6,8 +6,9 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./widgets/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
