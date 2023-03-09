@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { DarkModeButton } from "../../app/components/theme-button/dark-mode-button";
+import DarkModeButton from "../../components/theme-button/change-theme-button";
 import { HeaderNavBar } from "./nav/nav";
 import { Logo } from "./ui/logo";
 

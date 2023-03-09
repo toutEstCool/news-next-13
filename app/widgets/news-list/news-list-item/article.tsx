@@ -1,8 +1,9 @@
+import { ReadMoreButton } from "../../../components/read-more-button/read-more-button";
 import { ArticleProps } from "./article.types";
 
 export const Article = ({ article }: ArticleProps) => {
   return (
-    <article className="bg-[#ffffff] text-black dark:bg-slate-800 flex flex-col rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:bg-slate-200 transition-all duration-200 ease-out p-2">
+    <article className="bg-[#ffffff] dark:bg-slate-800 flex flex-col rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:bg-slate-200 transition-all duration-200 ease-out p-2">
       {article.image && (
         <img
           src={article.image}
@@ -10,7 +11,7 @@ export const Article = ({ article }: ArticleProps) => {
           className="h-56 w-full object-cover rounded-t-lg shadow-md"
         />
       )}
-      <div>
+      <div className="flex flex-col h-full justify-between">
         <div>
           <h3 className="font-thin text-sm text-orange-400 py-2">
             {article.category.toUpperCase()}
@@ -26,7 +27,7 @@ export const Article = ({ article }: ArticleProps) => {
             <p>{article.published_at}</p>
           </footer>
         </div>
-        {/* Read more */}
+        <ReadMoreButton article={article} />
       </div>
     </article>
   );

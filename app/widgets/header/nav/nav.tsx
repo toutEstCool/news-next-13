@@ -2,8 +2,8 @@
 
 import { usePathname } from "next/navigation";
 
-import { categories } from "../../../constants/constants";
-import { NavLink } from "../../../features/nav-link/nav-link";
+import { categories } from "../../../../constants/constants";
+import { NavLink } from "../../../../features/nav-link/nav-link";
 
 export const HeaderNavBar: React.FC = (): JSX.Element => {
   const pathname = usePathname();

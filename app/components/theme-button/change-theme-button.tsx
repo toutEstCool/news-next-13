@@ -4,15 +4,17 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
 
-export const DarkModeButton = () => {
-  const [mounted, setMounted] = useState(false);
+export default function DarkModeButton() {
+  const [mounted, setMounted] = useState<boolean>(false);
   const { systemTheme, theme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  if (!mounted) {
+    return null;
+  }
 
   const currentTheme = theme === "system" ? systemTheme : theme;
 
@@ -33,4 +35,4 @@ export const DarkModeButton = () => {
       )}
     </div>
   );
-};
+}
